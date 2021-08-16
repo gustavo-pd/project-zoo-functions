@@ -2,10 +2,7 @@ const { species, employees } = require('./data');
 const data = require('./data');
 
 function getSpeciesByIds(...ids) {
-  const mustBeIncluded = (id, index) => {
-    return id.id === ids[index];
-  };
-
+  const mustBeIncluded = (id, index) => id.id === ids[index];
   const filteredSpecies = species.filter(mustBeIncluded);
   return filteredSpecies;
 }
@@ -21,11 +18,8 @@ function getAnimalsOlderThan(animal, age) {
 }
 
 function getEmployeeByName(employeeName) {
-  const getEmployee = employees.find((name) => {
-    return name.firstName === employeeName || name.lastName === employeeName;
-  });
   if (employeeName === undefined) return {};
-  return getEmployee;
+  return employees.find((na) => (na.firstName === employeeName || na.lastName === employeeName));
 }
 
 function createEmployee(personalInfo, associatedWith) {
