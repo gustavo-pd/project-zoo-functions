@@ -8,12 +8,8 @@ function getSpeciesByIds(...ids) {
 }
 
 function getAnimalsOlderThan(animal, age) {
-  const getAnimal = species.find((specie) => {
-    return animal === specie.name;
-  });
-  const getAge = getAnimal.residents.every((ages) => {
-    return age <= ages.age;
-  });
+  const getAnimal = species.find((specie) => animal === specie.name);
+  const getAge = getAnimal.residents.every((ages) => age <= ages.age);
   return getAge;
 }
 
