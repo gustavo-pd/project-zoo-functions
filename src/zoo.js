@@ -56,10 +56,7 @@ function countAnimals(speciesS = '') {
   return bixarada;
 }
 
-function calculateEntry(entrants) {
-  if (!entrants) {
-    return 0;
-  }
+function calculateEntry(entrants = 0) {
   const {
     Adult = 0,
     Senior = 0,
