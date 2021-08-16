@@ -40,9 +40,7 @@ function createEmployee(personalInfo, associatedWith) {
 }
 
 function isManager(id) {
-  const condicao = (valor) => {
-    return valor.managers.includes(id);
-  };
+  const condicao = ((valor) => valor.managers.includes(id));
   return employees.some(condicao);
 }
 
